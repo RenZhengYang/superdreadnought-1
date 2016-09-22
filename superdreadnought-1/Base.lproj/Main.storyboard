@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EdH-GR-rLw">
+                                <rect key="frame" x="20" y="347" width="560" height="233"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Bb-Lb-ctz" customClass="UIHyperlinksButton">
+                                <rect key="frame" x="256" y="134" width="89" height="30"/>
+                                <state key="normal" title="www.qq.com"/>
+                                <connections>
+                                    <action selector="openQQ:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uxj-Wc-425"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RfZ-Do-7Y1" customClass="HyperLinks">
+                                <rect key="frame" x="160" y="68" width="258" height="30"/>
+                                <state key="normal" title="www.baidu.com"/>
+                                <connections>
+                                    <action selector="openBD:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Byl-ds-gBZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="EdH-GR-rLw" secondAttribute="trailing" constant="20" id="1dn-xN-EbX"/>
+                            <constraint firstItem="1Bb-Lb-ctz" firstAttribute="top" secondItem="RfZ-Do-7Y1" secondAttribute="bottom" constant="36" id="8fp-3f-F01"/>
+                            <constraint firstItem="EdH-GR-rLw" firstAttribute="top" secondItem="1Bb-Lb-ctz" secondAttribute="bottom" constant="183" id="MVE-OX-c8M"/>
+                            <constraint firstItem="EdH-GR-rLw" firstAttribute="centerX" secondItem="RfZ-Do-7Y1" secondAttribute="centerX" id="OVh-y3-NOg"/>
+                            <constraint firstItem="RfZ-Do-7Y1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="48" id="elB-1Q-cXq"/>
+                            <constraint firstItem="1Bb-Lb-ctz" firstAttribute="centerX" secondItem="RfZ-Do-7Y1" secondAttribute="centerX" id="tW7-kL-OnD"/>
+                            <constraint firstItem="EdH-GR-rLw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="tnc-L7-xgQ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="EdH-GR-rLw" secondAttribute="bottom" constant="20" id="zOv-xb-P0b"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="qqBtn" destination="1Bb-Lb-ctz" id="aFh-ZQ-AaJ"/>
+                        <outlet property="showWebView" destination="EdH-GR-rLw" id="wyR-Lo-5ma"/>
+                        <outlet property="urlBtn" destination="RfZ-Do-7Y1" id="tre-3o-DbC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="390" y="307"/>
+        </scene>
+    </scenes>
+</document>
